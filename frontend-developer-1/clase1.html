@@ -9,99 +9,99 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
     <title>pagina1</title>
-</head>
-<style>
-    :root { /* esto nos indica que aqui vamos a tener ciertas variables de css*/
-        --very-light-pink: #C7C7C7;
-        --text-input-field: #F7F7F7;
-        --hospital-green: #ACD9B2;
-        --white: #FFFFFF;
-        --black: #000000;
-        --dark: #232830;
-        --sm: 14px;         /*Estas medidas se ponen aca al ojo% para darcelas a las font-sized mas adelante*/
-        --md: 16px;
-        --lg: 18px;
-    }
-    body{
-        margin: 0; /* Quitarle los margenes al body*/
-        font-family: 'Quicksand', sans-serif;
-    }
-    .login{
-        width: 100%;
-        height: 100vh;
-        display: grid;              /*Este*/
-        place-items: center;        /*con este, centran horizontal y vertical*/
-    }
-    .form-container{
-        display: grid;              /*tres filas: auto 1fr auto - 1 para el titulo y subtitulo - 2 para los form - 3 para el boton*/
-        grid-template-rows: auto 1fr auto;   /*de tipo auto toma el tamaño que el desee*/
-        width: 300px;               /*Este ancho se le puso al ojo%*/
-    }
-    .logo{                          /* para direccionar las imagenes o logos se coloca en la etiqueta de imagen un ./ y se selecciona*/
-        width: 150px;
-        margin-bottom: 48px;        /*para separarlo de el titulo por debajo*/
-        justify-self: center;       /*para que se alinie en el centro*/
-        display: none;              /*para que no aparesca en desktop - despues con responsive se acomoda para que aparesca en mobil*/
-    }
-    .title{
-        font-size: var(--lg);       /*Esta fue una variable que cree para letra grande*/
-        margin-bottom: 12px;        /*para que quede justo con el subtitulo*/
-        text-align: center;         /*centrar el titulo*/
-    }
-    .subtitle{
-        color: var(--very-light-pink);      /*el color es un poco mas clarito*/
-        font-size: var(--md);               /* variable creada para letra media*/
-        font-weight: 300;                   /*traido de goggle - para que sea mas delgado*/
-        margin-top: 0;                      /*para que no se solapen los margenes entre el h1 y el p*/
-        margin-bottom: 32px;                    /*para separarlo del formulario*/
-        text-align: center;
-    } /*aqui se salto la clase form*/ /*lo hace despues de hacer label e input*/
-    .form{
-        display: flex;              /*Esto es para poner las etiquetas por encima de las entradas*/
-        flex-direction: column;
-    }
-
-    .label{
-        font-size: var(--sm);
-        font-weight: bold;
-        margin-bottom: 4px;         /*segun guia de shopifay*/
-    }
-    .input{
-        background-color: var(--text-input-field);
-        border: none;
-        border-radius: 8px;
-        height: 30px;
-        font-size: var(--md);
-        padding: 6px;               /*aumenta o disminulle el tamaño de la caja de la input o entrada*/
-        margin-bottom: 12px;        /*para que se separen la entrada de arriba con la etiqueta de abajo*/
-    }
-    .primary-button{
-        background-color: var(--hospital-green);
-        color: var(--white);
-        font-size: var(--md);
-        font-weight: bold;
-        border: 0;                  /*tiene el mismo efecto del border none*/
-        padding: 12px;              /*con este yo le habia dado la altura pero la profe se lo dio con height*/
-        border-radius: 10px;
-        margin-top: 24px;           /*este lo habia puesto yo, pero la profe utilizo la clase loging-button para hacerle margenes*/
-                                    /*Ambos casos sirven pero asi como esta, tiene selectividad la clase login-button*/
-                                    /*yo lo hubiera hecho con margin-top pero voy a seguir al pie de letra la clase*/
-        width: 100%;                /*la puso la profe pero yo veo que no hace falta*/
-        height: 50px;
-        cursor: pointer;
-    }
-    .login-button{
-        margin-top: 14px;
-        margin-bottom: 30px;
-    }
-    @media (max-width: 640px){      /*aparese el logo siempre que el ancho de la pantalla sea menor de 640*/
-        .logo {
-            display: block;
+    <style>
+        :root { /* esto nos indica que aqui vamos a tener ciertas variables de css*/
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --white: #FFFFFF;
+            --black: #000000;
+            --dark: #232830;
+            --sm: 14px;         /*Estas medidas se ponen aca al ojo% para darcelas a las font-sized mas adelante*/
+            --md: 16px;
+            --lg: 18px;
         }
-    }
+        body{
+            margin: 0; /* Quitarle los margenes al body*/
+            font-family: 'Quicksand', sans-serif;
+        }
+        .login{
+            width: 100%;
+            height: 100vh;
+            display: grid;              /*Este*/
+            place-items: center;        /*con este, centran horizontal y vertical*/
+        }
+        .form-container{
+            display: grid;              /*tres filas: auto 1fr auto - 1 para el titulo y subtitulo - 2 para los form - 3 para el boton*/
+            grid-template-rows: auto 1fr auto;   /*de tipo auto toma el tamaño que el desee*/
+            width: 300px;               /*Este ancho se le puso al ojo%*/
+        }
+        .logo{                          /* para direccionar las imagenes o logos se coloca en la etiqueta de imagen un ./ y se selecciona*/
+            width: 150px;
+            margin-bottom: 48px;        /*para separarlo de el titulo por debajo*/
+            justify-self: center;       /*para que se alinie en el centro*/
+            display: none;              /*para que no aparesca en desktop - despues con responsive se acomoda para que aparesca en mobil*/
+        }
+        .title{
+            font-size: var(--lg);       /*Esta fue una variable que cree para letra grande*/
+            margin-bottom: 12px;        /*para que quede justo con el subtitulo*/
+            text-align: center;         /*centrar el titulo*/
+        }
+        .subtitle{
+            color: var(--very-light-pink);      /*el color es un poco mas clarito*/
+            font-size: var(--md);               /* variable creada para letra media*/
+            font-weight: 300;                   /*traido de goggle - para que sea mas delgado*/
+            margin-top: 0;                      /*para que no se solapen los margenes entre el h1 y el p*/
+            margin-bottom: 32px;                    /*para separarlo del formulario*/
+            text-align: center;
+        } /*aqui se salto la clase form*/ /*lo hace despues de hacer label e input*/
+        .form{
+            display: flex;              /*Esto es para poner las etiquetas por encima de las entradas*/
+            flex-direction: column;
+        }
+
+        .label{
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;         /*segun guia de shopifay*/
+        }
+        .input{
+            background-color: var(--text-input-field);
+            border: none;
+            border-radius: 8px;
+            height: 30px;
+            font-size: var(--md);
+            padding: 6px;               /*aumenta o disminulle el tamaño de la caja de la input o entrada*/
+            margin-bottom: 12px;        /*para que se separen la entrada de arriba con la etiqueta de abajo*/
+        }
+        .primary-button{
+            background-color: var(--hospital-green);
+            color: var(--white);
+            font-size: var(--md);
+            font-weight: bold;
+            border: 0;                  /*tiene el mismo efecto del border none*/
+            padding: 12px;              /*con este yo le habia dado la altura pero la profe se lo dio con height*/
+            border-radius: 10px;
+            margin-top: 24px;           /*este lo habia puesto yo, pero la profe utilizo la clase loging-button para hacerle margenes*/
+                                        /*Ambos casos sirven pero asi como esta, tiene selectividad la clase login-button*/
+                                        /*yo lo hubiera hecho con margin-top pero voy a seguir al pie de letra la clase*/
+            width: 100%;                /*la puso la profe pero yo veo que no hace falta*/
+            height: 50px;
+            cursor: pointer;
+        }
+        .login-button{
+            margin-top: 14px;
+            margin-bottom: 30px;
+        }
+        @media (max-width: 640px){      /*aparese el logo siempre que el ancho de la pantalla sea menor de 640*/
+            .logo {
+                display: block;
+            }
+        }
 
 
-</style>
+    </style>
+</head>
 <body>
     <div class="login">
         <div class="form-container">
