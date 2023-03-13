@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
-    <title>pagina4</title>
+    <title>pagina5</title>
     <style>
         :root { /* esto nos indica que aqui vamos a tener ciertas variables de css*/
             --very-light-pink: #C7C7C7;
@@ -54,29 +54,18 @@
             font-weight: bold;
             margin-bottom: 4px;         /*segun guia de shopifay*/
         }
-        .input{
-            background-color: var(--text-input-field);
-            width: 100%;
-            border: none;
-            border-radius: 8px;
-            height: 30px;
+        .value{
+            color: var(--very-light-pink);
             font-size: var(--md);
-            margin-bottom: 12px;
-
+            margin-bottom: 8px 0 32px 0;        /* los cuatro lados empezando por el top a la derecha*/
         }
-        .input-name,
-        .input-email,
-        .input-password{
-            margin-bottom: 22px;
-
-        }
-        .primary-button{
-            background-color: var(--hospital-green);
-            color: var(--white);
+        .secondary-button{
+            background-color: var(--white);
+            color: var(--hospital-green);
             font-size: var(--md);
             height: 50px;
             font-weight: bold;
-            border: 0px;
+            border: 1px solid var(--hospital-green);
             border-radius: 8px;
             margin-bottom: 0px;
             cursor: pointer;
@@ -104,13 +93,13 @@
             <form action="" class="form">
                 <div>
                     <label for="name" class="label">Name</label>
-                    <input type="text" id="name" placeholder="Bernardo Dávila" class="input input-name">
+                    <p class="value">Bernardo Dávila</p>
                     <label for="emailaddress" class="label">Email address</label>
-                    <input type="email" id="emailaddress" placeholder="bernardoantoniod@gmail.com" class="input input-email">
+                    <p class="value">bernardoantoniod@gmail.com</p>
                     <label for="password" class="label">Password</label>
-                    <input type="password" id="password" placeholder="***************" class="input input-password">
+                    <p class="value">*****************</p>
                 </div>
-                <button class="primary-button secondary-position">Create</button>
+                <button class="secondary-button secondary-position">Edit</button>
             </form>
         </div>
     </div>
