@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
-    <title>pagina1</title>
+    <title>pagina3</title>
     <style>
         :root { /* esto nos indica que aqui vamos a tener ciertas variables de css*/
             --very-light-pink: #C7C7C7;
@@ -42,24 +42,17 @@
             justify-self: center;       /*para que se alinie en el centro*/
             display: none;              /*para que no aparesca en desktop - despues con responsive se acomoda para que aparesca en mobil*/
         }
-        .title{
-            font-size: var(--lg);       /*Esta fue una variable que cree para letra grande*/
-            margin-bottom: 12px;        /*para que quede justo con el subtitulo*/
-            text-align: center;         /*centrar el titulo*/
-        }
-        .subtitle{
-            color: var(--very-light-pink);      /*el color es un poco mas clarito*/
-            font-size: var(--md);               /* variable creada para letra media*/
-            font-weight: 300;                   /*traido de goggle - para que sea mas delgado*/
-            margin-top: 0;                      /*para que no se solapen los margenes entre el h1 y el p*/
-            margin-bottom: 32px;                    /*para separarlo del formulario*/
-            text-align: center;
-        } /*aqui se salto la clase form*/ /*lo hace despues de hacer label e input*/
         .form{
             display: flex;              /*Esto es para poner las etiquetas por encima de las entradas*/
             flex-direction: column;
         }
-
+        .form a{
+            text-decoration: none;
+            text-align: center;
+            color: var(--hospital-green);
+            font-size: var(--sm);
+            margin-bottom: 52px;
+        }
         .label{
             font-size: var(--sm);
             font-weight: bold;
@@ -67,12 +60,15 @@
         }
         .input{
             background-color: var(--text-input-field);
+            width: 100%;
             border: none;
             border-radius: 8px;
             height: 30px;
             font-size: var(--md);
-            padding: 6px;               /*aumenta o disminulle el tamaño de la caja de la input o entrada*/
             margin-bottom: 12px;        /*para que se separen la entrada de arriba con la etiqueta de abajo*/
+        }
+        .input-email{
+            margin-bottom: 22px;
         }
         .primary-button{
             background-color: var(--hospital-green);
@@ -80,14 +76,27 @@
             font-size: var(--md);
             font-weight: bold;
             border: 0;                  /*tiene el mismo efecto del border none*/
-            padding: 12px;              /*con este yo le habia dado la altura pero la profe se lo dio con height*/
-            border-radius: 10px;
+            height: 50px;              /*con este yo le habia dado la altura pero la profe se lo dio con height*/
+            border-radius: 8px;
             margin-top: 24px;           /*este lo habia puesto yo, pero la profe utilizo la clase loging-button para hacerle margenes*/
                                         /*Ambos casos sirven pero asi como esta, tiene selectividad la clase login-button*/
                                         /*yo lo hubiera hecho con margin-top pero voy a seguir al pie de letra la clase*/
             width: 100%;                /*la puso la profe pero yo veo que no hace falta*/
             height: 50px;
             cursor: pointer;
+        }
+        .secondary-button{
+            background-color: var(--white);
+            color: var(--very-light-pink);
+            font-size: var(--md);
+            height: 50px;
+            font-weight: bold;
+            border: 1px solid var(--hospital-green); /*para colocarle un borde finito */
+            
+            border-radius: 8px;
+            margin-bottom: 0px;
+            cursor: pointer;
+            width: 100%;    /*Este se lo pongo por la responsive porque si no no hacia falta*/
         }
         .login-button{
             margin-top: 14px;
@@ -97,8 +106,15 @@
             .logo {
                 display: block;
             }
+            .secondary-position{
+                position: fixed;
+                bottom: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 300px;   /*mismo width de su container*/
+            }
         }
-
 
     </style>
 </head>
@@ -107,18 +123,19 @@
         <div class="form-container">
             <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">    
 
-            <h1 class="title">Create a new password</h1>
-            <p class="subtitle">Enter a new password for your account</p>
-
             <form action="" class="form">
+                <label for="emailaddress" class="label">Email address</label>
+                <input type="email" id="emailaddress" placeholder="bernardoantoniod@gmail.com" class="input input-email">
+
                 <label for="password" class="label">Password</label>
-                <input type="password" id="password" placeholder="*************" class="input input-password">
+                <input type="Password" id="password" placeholder="*************" class="input input-password">
 
-                <label for="new-password" class="label">Re-enter password</label>
-                <input type="new-password" id="password" placeholder="*************" class="input input-password">
+                <input type="submit" value="Log in" class="primary-button login-button">
 
-                <input type="submit" value="Confirm" class="primary-button login-button">
+                <a href="">Forgot my password</a>
             </form>
+
+            <button class="secondary-button secondary-position">Sign up</button>
 
         </div>
     </div>
