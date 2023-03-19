@@ -33,9 +33,6 @@
             padding: 0;
             margin: 0;
         }
-        .desktop-menu ul li{
-            text-align: end;
-        }
         .desktop-menu ul li:nth-child(1),
         .desktop-menu ul li:nth-child(2){   /*OJO ACA PUEDO CAMBIAR EL FONT-WEIGHT PERO NO EL COLOR */
             font-weight: bold;
@@ -53,7 +50,8 @@
             color: var(--black);
             text-decoration: none;
             margin-bottom: 20px;
-            display: inline-block;
+            display: flex;
+            flex-direction: row-reverse;
         }
 
     </style>
