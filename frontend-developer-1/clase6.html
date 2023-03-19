@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+    <title>Pagina6</title>
+    <style>
+
+        :root { /* esto nos indica que aqui vamos a tener ciertas variables de css*/
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --white: #FFFFFF;
+            --black: #000000;
+            --dark: #232830;
+            --sm: 14px;         /*Estas medidas se ponen aca al ojo% para darcelas a las font-sized mas adelante*/
+            --md: 16px;
+            --lg: 18px;
+        }
+
+        .main-container{ /*contiene todo en esta pagina*/
+
+        }
+        .cards-container{ /*contiene todos los productos que se agregaran como cards*/
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 500px);
+            gap: 26px;
+            place-content: center;
+
+
+        }
+        .product-card{ /* estilizamos los productos */
+            width: 500px;
+        }
+        .product-card img{
+            width: 500px;
+            height: auto;
+            border-radius: 20px;
+            object-fit: cover; /*esta hace que la imagen se adecue a un tamaño para que se vea bien ... pero yo ya la habia adecuado colocandole al height auto*/
+        }
+        .product-card figure img{
+            width: 50px;
+            height: 50px;
+        }
+        .product-info{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 5px;
+        }
+        .product-info figure{
+            margin: 0;
+        }
+        .product-info div p:nth-child(1){
+            font-weight: bold;
+            font-size: var(--md);
+            margin-top: 0;
+            margin-bottom: 0px;
+        }
+        .product-info div p:nth-child(2){
+            font-size: var(--sm);
+            margin-top: 5px;
+            margin-bottom: 0;
+            color: var(--very-light-pink);
+        }
+        @media (max-width:640px){
+            .cards-container{
+                display: grid;
+                grid-template-columns: repeat(auto-fill, 200px);
+                gap: 26px;
+                place-content: center;
+            }
+            .product-card{
+                width: 200px;
+            }
+            .product-card img{
+                width: 200px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <section class="main-container">
+        <div class="cards-container">
+
+            <div class="product-card">
+                <img src="https://assets.specialized.com/i/specialized/93322-70_SJ-ALLOY-WHTSGE-BLK_HERO?bg=rgb(241,241,241)&w=1600&h=900&fmt=auto" alt="Stumpjumper">
+                <div class="product-info">
+                    <div>
+                        <p>$2.000.000</p>
+                        <p>Stumpjumper Alloy</p>
+                    </div>
+                    <figure>
+                        <img src="/icons/bt_add_to_cart.svg" alt="icono-carrito">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://assets.specialized.com/i/specialized/95222-71_LEVO-ALLOY-ICEBLU-BLK_HERO?bg=rgb(241,241,241)&w=1600&h=900&fmt=auto" alt="Turbo Levo Alloy">
+                <div class="product-info">
+                    <div>
+                        <p>$4.600.000</p>
+                        <p>Turbo Levo Alloy</p>
+                    </div>
+                    <figure>
+                        <img src="/icons/bt_add_to_cart.svg" alt="icono-carrito">
+                    </figure>
+                </div>
+            </div>
+                        
+            <div class="product-card">
+                <img src="https://assets.specialized.com/i/specialized/91722-52_CHISEL-HT-COMP-REDTNT-BRSH-WHT_HERO?bg=rgb(241,241,241)&w=1600&h=900&fmt=auto" alt="Chisel-Comp">
+                <div class="product-info">
+                    <div>
+                        <p>$1.500.000</p>
+                        <p>Chisel Comp</p>
+                    </div>
+                    <figure>
+                        <img src="/icons/bt_add_to_cart.svg" alt="icono-carrito">
+                    </figure>
+                </div>
+            </div>
+                        
+            <div class="product-card">
+                <img src="https://assets.specialized.com/i/specialized/94823-31_EPIC-EVO-EXPERT-RSTDRED-BLZ-PRL_HERO?bg=rgb(241,241,241)&w=1600&h=900&fmt=auto" alt="Epic EVO Expert">
+                <div class="product-info">
+                    <div>
+                        <p>$5.900.000</p>
+                        <p>Epic EVO Expert</p>
+                    </div>
+                    <figure>
+                        <img src="/icons/bt_add_to_cart.svg" alt="icono-carrito">
+                    </figure>
+                </div>
+            </div>
+                        
+            <div class="product-card">
+                <img src="https://assets.specialized.com/i/specialized/95422-61_DIVERGE-SPORT-CARBON-LMSTN-BLK-CHRM_HERO?bg=rgb(241,241,241)&w=1600&h=900&fmt=auto" alt="Diverge Sport Carbon">
+                <div class="product-info">
+                    <div>
+                        <p>$3.100.000</p>
+                        <p>Diverge Sport Carbon</p>
+                    </div>
+                    <figure>
+                        <img src="/icons/bt_add_to_cart.svg" alt="icono-carrito">
+                    </figure>
+                </div>
+            </div>
+                        
+            <div class="product-card">
+                <img src="https://assets.specialized.com/i/specialized/95222-52_LEVO-COMP-ALLOY-FLORED-BLK_HERO?bg=rgb(241,241,241)&w=1600&h=900&fmt=auto" alt="Turbo Levo Comp Alloy">
+                <div class="product-info">
+                    <div>
+                        <p>$5.300.000</p>
+                        <p>Turbo Levo Comp Alloy</p>
+                    </div>
+                    <figure>
+                        <img src="/icons/bt_add_to_cart.svg" alt="icono-carrito">
+                    </figure>
+                </div>
+            </div>
+                        
+            <div class="product-card">
+                <img src="https://assets.specialized.com/i/specialized/96322-51_SJ-EVO-COMP-DOP-SND_HERO?bg=rgb(241,241,241)&w=1600&h=900&fmt=auto" alt="Stumpjumper EVO Comp">
+                <div class="product-info">
+                    <div>
+                        <p>$3.900.000</p>
+                        <p>Stumpjumper EVO Comp</p>
+                    </div>
+                    <figure>
+                        <img src="/icons/bt_add_to_cart.svg" alt="icono-carrito">
+                    </figure>
+                </div>
+            </div>
+                        
+            <div class="product-card">
+                <img src="https://assets.specialized.com/i/specialized/93622-00_ENDURO-SW-BLKLQDMET-BLKLQDMET-SILDST_HERO?bg=rgb(241,241,241)&w=1600&h=900&fmt=auto" alt="S-Works Enduro">
+                <div class="product-info">
+                    <div>
+                        <p>$8.900.000</p>
+                        <p>S-Works Enduro</p>
+                    </div>
+                    <figure>
+                        <img src="/icons/bt_add_to_cart.svg" alt="icono-carrito">
+                    </figure>
+                </div>
+            </div>
+                        
+            <div class="product-card">
+                <img src="https://assets.specialized.com/i/specialized/90322-50_EPIC-COMP-MRN-ICEPPYA_HERO?bg=rgb(241,241,241)&w=1600&h=900&fmt=auto" alt="Epic Comp">
+                <div class="product-info">
+                    <div>
+                        <p>$3.500.000</p>
+                        <p>Epic Comp</p>
+                    </div>
+                    <figure>
+                        <img src="/icons/bt_add_to_cart.svg" alt="icono-carrito">
+                    </figure>
+                </div>
+            </div>
+                        
+            <div class="product-card">
+                <img src="https://assets.specialized.com/i/specialized/96821-55_LEVO-SL-COMP-CARBON-FLORED-BLK_HERO?bg=rgb(241,241,241)&w=1600&h=900&fmt=auto" alt="Turbo Levo SL Comp Carbon">
+                <div class="product-info">
+                    <div>
+                        <p>$4.700.000</p>
+                        <p>Turbo Levo SL Comp Carbon</p>
+                    </div>
+                    <figure>
+                        <img src="/icons/bt_add_to_cart.svg" alt="icono-carrito">
+                    </figure>
+                </div>
+            </div>
+                        
+            <div class="product-card">
+                <img src="https://assets.specialized.com/i/specialized/90323-50_EPIC-COMP-MNSHDW-HRVGLDMET_HERO?bg=rgb(241,241,241)&w=1600&h=900&fmt=auto" alt="Epic Comp">
+                <div class="product-info">
+                    <div>
+                        <p>$4.400.000</p>
+                        <p>Epic Comp</p>
+                    </div>
+                    <figure>
+                        <img src="/icons/bt_add_to_cart.svg" alt="icono-carrito">
+                    </figure>
+                </div>
+            </div>
+                        
+            <div class="product-card">
+                <img src="https://assets.specialized.com/i/specialized/96820-50_LEVO-SL-COMP-DSTTUR-BLK_HERO?bg=rgb(241,241,241)&w=1600&h=900&fmt=auto" alt="Levo SL Comp">
+                <div class="product-info">
+                    <div>
+                        <p>$3.900.000</p>
+                        <p>Levo SL Comp</p>
+                    </div>
+                    <figure>
+                        <img src="/icons/bt_add_to_cart.svg" alt="icono-carrito">
+                    </figure>
+                </div>
+            </div>
+                        
+            <div class="product-card">
+                <img src="https://assets.specialized.com/i/specialized/96518-71_RIP_CSTR-12_ACDPRP-BLK-WHT_HERO?bg=rgb(241,241,241)&w=1600&h=900&fmt=auto" alt="Riprock Coaster 12">
+                <div class="product-info">
+                    <div>
+                        <p>$200.000</p>
+                        <p>Riprock Coaster 12</p>
+                    </div>
+                    <figure>
+                        <img src="/icons/bt_add_to_cart.svg" alt="icono-carrito">
+                    </figure>
+                </div>
+            </div>
+                        
+            <div class="product-card">
+                <img src="https://assets.specialized.com/i/specialized/91722-72_CHISEL-HT-SMK-TARBLK_HERO?bg=rgb(241,241,241)&w=1600&h=900&fmt=auto" alt="Chisel">
+                <div class="product-info">
+                    <div>
+                        <p>$1.200.000</p>
+                        <p>Chisel</p>
+                    </div>
+                    <figure>
+                        <img src="/icons/bt_add_to_cart.svg" alt="icono-carrito">
+                    </figure>
+                </div>
+            </div>
+                        
+            <div class="product-card">
+                <img src="https://assets.specialized.com/i/specialized/93722-72_STATUS-160-WHTSGE-GUN_HERO?bg=rgb(241,241,241)&w=1600&h=900&fmt=auto" alt="Status 160">
+                <div class="product-info">
+                    <div>
+                        <p>$2.500.000</p>
+                        <p>Status 160</p>
+                    </div>
+                    <figure>
+                        <img src="/icons/bt_add_to_cart.svg" alt="icono-carrito">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
