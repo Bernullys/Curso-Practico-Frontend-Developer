@@ -24,28 +24,61 @@
             margin: 0; /* Quitarle los margenes al body*/
             font-family: 'Quicksand', sans-serif;
         }
-        .mobile-menu {
-
+        .mobile-menu-top {
+            font-weight: bold; /*extrañamente me agarra este para toda la letra pero no le puedo dar color aqui porque no la toma*/
+            
         }
-        .mobile-menu ul{
+        .mobile-menu-top ul{
             list-style: none;
+            margin: 0px;
             padding: 30px;
-
-            
             
         }
-        .mobile-menu ul li {
+        .mobile-menu-top ul li {
+            padding: 15px;
+            
     
         }
-        .mobile-menu ul li a{
+        .mobile-menu-top ul li a{
             text-decoration: none;
+            color: var(--black);
+        }
+        .mobile-menu-top ul:nth-child(1) {
+            border-bottom: 1px solid var(--very-light-pink)
+
+        }
+        .mobile-menu-button ul{
+            list-style: none;
+            margin-top: 50px;
+        }
+        .mobile-menu-button ul li {
+            padding: 5px;
+        }
+        .mobile-menu-button a{
+            text-decoration: none;
+        }
+        .email {
+            color: var(--black);
+            font-weight: 100;
+        }
+        .sign-out {
+            font-weight: bold;
+            color: var(--hospital-green);
+        }
+        #x-button {
+            display: flex;
+            flex-direction: row-reverse;
+            font-weight: 100;
         }
 
     </style>
 </head>
 <body>
-    <div class="mobile-menu">
+    <div class="mobile-menu-top">
         <ul>
+            <li>
+                <a href="" id="x-button">X</a>
+            </li>
             <li>
                 <a href="">CATEGORIES</a>
             </li>
@@ -78,12 +111,16 @@
             </li>
         </ul>
 
+    </div>
+
+    <div class="mobile-menu-button">
+
         <ul>
             <li>
-                <a href="">bernardoantoniod@gmail.com</a>
+                <a href="" class="email">bernardoantoniod@gmail.com</a>
             </li>
             <li>
-                <a href="">Sign out</a>
+                <a href="" class="sign-out">Sign out</a>
             </li>
         </ul>
 
