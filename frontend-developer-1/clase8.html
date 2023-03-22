@@ -43,8 +43,8 @@
             text-decoration: none;
             color: var(--black);
         }
-        .mobile-menu-top ul:nth-child(1) {
-            border-bottom: 1px solid var(--very-light-pink)
+        .mobile-menu-top ul:nth-child(2) {
+            padding: 5px 30px 30px 30px;
 
         }
         .mobile-menu-button ul{
@@ -68,7 +68,13 @@
         #x-button {
             display: flex;
             flex-direction: row-reverse;
-            font-weight: 100;
+            font-weight: bold;
+        }
+        #line {
+            border-bottom: 1px solid var(--very-light-pink);
+            margin: 30px 30px 0 30px;
+            padding: 15px 15px 0 15px;
+            color: var(--very-light-pink);
         }
 
     </style>
@@ -100,6 +106,7 @@
             <li>
                 <a href="">Others</a>
             </li>
+            <li id="line"> </li>
         </ul>
 
         <ul>
