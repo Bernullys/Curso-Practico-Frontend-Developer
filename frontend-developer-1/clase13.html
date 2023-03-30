@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+    <title>Detalle de producto</title>
+    <style>
+        :root { /* esto nos indica que aqui vamos a tener ciertas variables de css*/
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --white: #FFFFFF;
+            --black: #000000;
+            --dark: #232830;
+            --sm: 14px;         /*Estas medidas se ponen aca al ojo% para darcelas a las font-sized mas adelante*/
+            --md: 16px;
+            --lg: 18px;
+        }
+        body{
+            margin: 0; /* Quitarle los margenes al body*/
+            font-family: 'Quicksand', sans-serif;
+        }
+        .product-detail {
+
+        }
+        .primary-button{
+            background-color: var(--hospital-green);
+            color: var(--white);
+            font-size: var(--md);
+            font-weight: bold;
+            border: 0;                  /*tiene el mismo efecto del border none*/
+            height: 50px;              /*con este yo le habia dado la altura pero la profe se lo dio con height*/
+            border-radius: 8px;
+            margin-top: 24px;           /*este lo habia puesto yo, pero la profe utilizo la clase loging-button para hacerle margenes*/
+                                        /*Ambos casos sirven pero asi como esta, tiene selectividad la clase login-button*/
+                                        /*yo lo hubiera hecho con margin-top pero voy a seguir al pie de letra la clase*/
+            width: 100%;                /*la puso la profe pero yo veo que no hace falta*/
+            height: 50px;
+            cursor: pointer;
+        }
+        .secondary-button{
+            background-color: var(--white);
+            color: var(--very-light-pink);
+            font-size: var(--md);
+            height: 50px;
+            font-weight: bold;
+            border: 1px solid var(--hospital-green); /*para colocarle un borde finito */
+            
+            border-radius: 8px;
+            margin-bottom: 0px;
+            cursor: pointer;
+            width: 100%;    /*Este se lo pongo por la responsive porque si no no hacia falta*/
+        }
+    </style>
+</head>
+<body>
+
+    <aside class="product-detail">
+
+        <div class="product-detail-close">
+
+            <img src="./icons/icon_close.png" alt="close">
+
+        </div>
+
+        <img src="https://assets.specialized.com/i/specialized/93322-70_SJ-ALLOY-WHTSGE-BLK_HERO?bg=rgb(241,241,241)&w=1600&h=900&fmt=auto" alt="Stumpjumper">
+
+        <div class="product-info">
+
+            <p>$price</p>
+
+            <p>Bike name</p>
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae aut deleniti amet, necessitatibus atque qui nostrum eos reiciendis in quibusdam laborum veritatis ipsum odit ad iste libero. Accusamus, non placeat.
+            Perferendis ipsa quidem, maiores reprehenderit, natus fugit cupiditate hic blanditiis voluptate ea quod obcaecati incidunt beatae ut atque ipsam nostrum, accusantium iusto tenetur eum! Exercitationem eum est neque corrupti harum!</p>
+
+            <button class="primary-button add-to-car-button">
+                <img src="./icons/bt_add_to_cart.svg" alt="add to cart">Add to cart
+            </button>
+
+        </div>
+
+    </aside>
+
+</body>
+</html>
