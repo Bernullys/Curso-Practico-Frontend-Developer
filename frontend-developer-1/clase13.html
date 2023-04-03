@@ -26,35 +26,89 @@
             font-family: 'Quicksand', sans-serif;
         }
         .product-detail {
-
+            width: 640px;
+            padding-bottom: 24px;
+            position: absolute;
+            right: 0;
+        }
+        .product-detail-close {
+            background-color: var(--white);
+            width: 14px;
+            height: 14px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 2;
+            padding: 12px;
+            border-radius: 50%;
+        }
+        .product-detail-close:hover {
+            cursor: pointer;
+        }
+        .product-detail > img:nth-child(2) {
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            border-radius: 0 0 20px 20px;
+        }
+        .dots {
+            text-align: center;
+        }
+        .dot {
+            display: inline-block;
+            margin: 0 2px;
+            cursor: pointer;
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+            background-color: var(--very-light-pink);
+        }
+        .dots span:nth-child(1) {
+            background-color: var(--hospital-green);
+        }
+        .product-info {
+            margin: 24px 24px 0 24px;
+        }
+        .product-info p:nth-child(1) {
+            font-weight: bold;
+            font-size: var(--md);
+            margin-top: 0;
+            margin-bottom: 4px;
+        }
+        .product-info p:nth-child(2) {
+            font-size: var(--md);
+            color: var(--very-light-pink);
+            margin-top: 0;
+            margin-bottom: 36px;
+        }
+        .product-info p:nth-child(3) {
+            font-size: var(--md);
+            color: var(--very-light-pink);
+            margin-top: 0;
+            margin-bottom: 36px;
         }
         .primary-button{
             background-color: var(--hospital-green);
             color: var(--white);
             font-size: var(--md);
             font-weight: bold;
-            border: 0;                  /*tiene el mismo efecto del border none*/
-            height: 50px;              /*con este yo le habia dado la altura pero la profe se lo dio con height*/
+            border: 0;                  
+            height: 50px;             
             border-radius: 8px;
-            margin-top: 24px;           /*este lo habia puesto yo, pero la profe utilizo la clase loging-button para hacerle margenes*/
-                                        /*Ambos casos sirven pero asi como esta, tiene selectividad la clase login-button*/
-                                        /*yo lo hubiera hecho con margin-top pero voy a seguir al pie de letra la clase*/
-            width: 100%;                /*la puso la profe pero yo veo que no hace falta*/
+            margin-top: 24px;           
+            width: 100%;
             height: 50px;
             cursor: pointer;
         }
-        .secondary-button{
-            background-color: var(--white);
-            color: var(--very-light-pink);
-            font-size: var(--md);
-            height: 50px;
-            font-weight: bold;
-            border: 1px solid var(--hospital-green); /*para colocarle un borde finito */
-            
-            border-radius: 8px;
-            margin-bottom: 0px;
-            cursor: pointer;
-            width: 100%;    /*Este se lo pongo por la responsive porque si no no hacia falta*/
+        .add-to-cart-button {
+            display: flex;              /*este display alinea dentro del botón la imagen y el texto*/
+            align-items: center;
+            justify-content: center;
+        }
+        @media (max-width: 640px) {
+            .product-detail {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -70,6 +124,14 @@
 
         <img src="https://assets.specialized.com/i/specialized/93322-70_SJ-ALLOY-WHTSGE-BLK_HERO?bg=rgb(241,241,241)&w=1600&h=900&fmt=auto" alt="Stumpjumper">
 
+        <div class="dots">
+            
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+
+        </div>
+
         <div class="product-info">
 
             <p>$price</p>
@@ -79,7 +141,7 @@
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae aut deleniti amet, necessitatibus atque qui nostrum eos reiciendis in quibusdam laborum veritatis ipsum odit ad iste libero. Accusamus, non placeat.
             Perferendis ipsa quidem, maiores reprehenderit, natus fugit cupiditate hic blanditiis voluptate ea quod obcaecati incidunt beatae ut atque ipsam nostrum, accusantium iusto tenetur eum! Exercitationem eum est neque corrupti harum!</p>
 
-            <button class="primary-button add-to-car-button">
+            <button class="primary-button add-to-cart-button">
                 <img src="./icons/bt_add_to_cart.svg" alt="add to cart">Add to cart
             </button>
 
