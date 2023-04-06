@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
-    <title>Create-a-new-password</title>
+    <title>My account-1</title>
     <style>
         :root {
             --black: #000000;
@@ -32,29 +32,17 @@
         .container-content {
             display: grid;
             flex-direction: column;
+            width: 360px;
         }
-        .logo {
-            height: 150px;
-            width: 150px;
-            justify-self: center;
-            display: none;
-            
+        .title {
+            font-size: var(--lg);
+            font-weight: bold;
+            margin-bottom: 40px;
         }
         .description-container {
             display: flex;
             flex-direction: column;
             align-items: center;
-        }
-        .title {
-            font-size: var(--lg);
-            font-weight: bold;
-            margin: 10px;
-        }
-        .subtitle {
-            font-size: var(--lg);
-            font-weight: 100;
-            color: var(--dark);
-            margin: 0px 0px 45px;
         }
         .description-container label {
             width: 100%;
@@ -64,26 +52,31 @@
         }
         .description-container input {
             width: 100%;
-            background-color: var(--text-input-field);
+            background-color: var(--white);
             border: none;
             border-radius: 8px;
             height: 40px;
             margin-bottom: 30px;
         }
+        .container-button {
+            position: relative;
+            width: 360px;
+        }
         .Primary-button {
             width: 100%;
-            background-color: var(--hospital-green);
-            color: var(--white);
+            background-color: var(--white);
+            color: var(--hospital-green);
             font-size: var(--md);
             font-weight: bold;
-            border: none;
+            border: 1px solid;
             border-radius: 8px;
             height: 50px;
             margin-top: 10px;
         }
         @media(max-width:640px) {
-            .logo {
-                display: block;
+            .container-button {
+                position: absolute;
+                bottom: 0;
             }
         }
     </style>
@@ -93,23 +86,26 @@
 
         <div class="container-content">
 
-            <img src="./logos/logo_yard_sale.svg" alt="Yard-Sale-Logo" class="logo">
+            <h1 class="title">My account</h1>
 
             <form class="description-container">
 
-                <h1 class="title">Create a new password</h1>
-                <p class="subtitle">Enter a new password for your account</p>
+                <label for="Name">Name</label>
+                <input type="text" name="Name" id="" placeholder="Bernardo Dávila">
 
-        
+                <label for="email">Email address</label>
+                <input type="email" name="email" id="" placeholder="bernardoantoniod@gmail.com">
+
                 <label for="password">Password</label>
                 <input type="password" name="password" id="" placeholder="***************">
 
-                <label for="Re-enter password">Re-enter password</label>
-                <input type="password" name="Re-enter password" id="" placeholder="***************">
-
-                <button class="Primary-button">Confirm</button>
-
             </form>
+
+        </div>
+
+        <div class="container-button">
+
+            <button class="Primary-button">Edit</button>
 
         </div>
    
