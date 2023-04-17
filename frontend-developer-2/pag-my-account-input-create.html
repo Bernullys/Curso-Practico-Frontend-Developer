@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
-    <title>My account-1</title>
-    <style> /* Esta pagina es para ver los datos insertados, no para insertarlos por lo que los input cambian a parrafos*/
+    <title>My account-input</title>
+    <style>
         :root {
             --black: #000000;
             --white: #FFFFFF;
@@ -51,10 +51,12 @@
             font-weight: bold;
             margin-bottom: 8px;
         }
-        .description-container p {
+        .description-container input {
             width: 100%;
+            background-color: var(--text-input-field);
             font-size: var(--md);
-            font-weight: 100;
+            border: none;
+            border-radius: 8px;
             height: 40px;
             margin-bottom: 25px;
         }
@@ -64,8 +66,8 @@
         }
         .Primary-button {
             width: 100%;
-            background-color: var(--white);
-            color: var(--hospital-green);
+            background-color: var(--hospital-green);
+            color: var(--white);
             font-size: var(--lg);
             font-weight: bold;
             border: 1px solid;
@@ -95,14 +97,13 @@
             <form class="description-container">
 
                 <label for="Name">Name</label>
-                <p>Bernardo Dávila</p>
-                
+                <input type="text" name="Name" id="" placeholder="Bernardo Dávila">
 
                 <label for="email">Email address</label>
-                <p>bernardoantoniod@gmail.com</p>
+                <input type="email" name="email" id="" placeholder="bernardoantoniod@gmail.com">
 
                 <label for="password">Password</label>
-                <p>***************</p>
+                <input type="password" name="password" id="" placeholder="***************">
 
             </form>
 
@@ -110,7 +111,7 @@
 
         <div class="container-button">
 
-            <button class="Primary-button">Edit</button>
+            <button class="Primary-button">Create</button>
 
         </div>
    
