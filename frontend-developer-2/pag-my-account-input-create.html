@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>My account-input</title>
+    <style>
+        :root {
+            --black: #000000;
+            --white: #FFFFFF;
+            --ver-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --dark: #232830;
+            --hospital-green: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        body {
+            font-family: 'Quicksand', sans-serif;
+        }
+        .container-general {
+            height: 100vh;
+            width: 100%;
+            display: grid;
+            place-items: center;
+        }
+        .container-content {
+            display: grid;
+            flex-direction: column;
+            width: 360px;
+            height: 0px;
+        }
+        .title {
+            font-size: var(--lg);
+            font-weight: bold;
+            margin-bottom: 45px;
+        }
+        .description-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .description-container label {
+            width: 100%;
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .description-container input {
+            width: 100%;
+            background-color: var(--text-input-field);
+            font-size: var(--md);
+            border: none;
+            border-radius: 8px;
+            height: 40px;
+            margin-bottom: 25px;
+        }
+        .container-button {
+            position: relative;
+            width: 360px;
+        }
+        .Primary-button {
+            width: 100%;
+            background-color: var(--hospital-green);
+            color: var(--white);
+            font-size: var(--lg);
+            font-weight: bold;
+            border: 1px solid;
+            border-radius: 8px;
+            height: 60px;
+            margin-top: 50px;
+        }
+        @media(max-width:640px) {
+            .container-button {
+                position: absolute;
+                bottom: 0;
+            }
+            .container-content {
+                position: absolute;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-general">
+
+        <div class="container-content">
+
+            <h1 class="title">My account</h1>
+
+            <form class="description-container">
+
+                <label for="Name">Name</label>
+                <input type="text" name="Name" id="" placeholder="Bernardo Dávila">
+
+                <label for="email">Email address</label>
+                <input type="email" name="email" id="" placeholder="bernardoantoniod@gmail.com">
+
+                <label for="password">Password</label>
+                <input type="password" name="password" id="" placeholder="***************">
+
+            </form>
+
+        </div>
+
+        <div class="container-button">
+
+            <button class="Primary-button">Create</button>
+
+        </div>
+   
+    </div>
+    
+</body>
+</html>
