@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>menú mobile</title>
+    <style>
+        :root { /* esto nos indica que aqui vamos a tener ciertas variables de css*/
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --white: #FFFFFF;
+            --black: #000000;
+            --dark: #232830;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        body{
+            margin: 0; /* Quitarle los margenes al body*/
+            font-family: 'Quicksand', sans-serif;
+        }
+        .mobile-menu-top {
+            font-weight: bold; /*extrañamente me agarra este para toda la letra pero no le puedo dar color aqui porque no la toma*/
+            
+        }
+        .mobile-menu-top ul{
+            list-style: none;
+            margin: 0px;
+            padding: 30px;
+            
+        }
+        .mobile-menu-top ul li {
+            padding: 15px;
+            
+    
+        }
+        .mobile-menu-top ul li a{
+            text-decoration: none;
+            color: var(--black);
+        }
+        .mobile-menu-top ul:nth-child(2) {
+            padding: 5px 30px 30px 30px;
+
+        }
+        .mobile-menu-button ul{
+            list-style: none;
+            margin-top: 50px;
+        }
+        .mobile-menu-button ul li {
+            padding: 5px;
+        }
+        .mobile-menu-button a{
+            text-decoration: none;
+        }
+        .email {
+            color: var(--black);
+            font-weight: 100;
+        }
+        .sign-out {
+            font-weight: bold;
+            color: var(--hospital-green);
+        }
+        #x-button {
+            display: flex;
+            flex-direction: row-reverse;
+            font-weight: bold;
+        }
+        #line {
+            border-bottom: 1px solid var(--very-light-pink);
+            margin: 30px 30px 0 30px;
+            padding: 15px 15px 0 15px;
+            color: var(--very-light-pink);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="mobile-menu-top">
+        <ul>
+            <li>
+                <a href="" id="x-button">X</a>
+            </li>
+            <li>
+                <a href="">CATEGORIES</a>
+            </li>
+            <li>
+                <a href="">All</a>
+            </li>
+            <li>
+                <a href="">Clothes</a>
+            </li>
+            <li>
+                <a href="">Electronics</a>
+            </li>
+            <li>
+                <a href="">Furnitures</a>
+            </li>
+            <li>
+                <a href="">Toys</a>
+            </li>
+            <li>
+                <a href="">Others</a>
+            </li>
+            <li id="line"> </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href="">My orders</a>
+            </li>
+            <li>
+                <a href="">My account</a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="mobile-menu-button">
+
+        <ul>
+            <li>
+                <a href="" class="email">bernardoantoniod@gmail.com</a>
+            </li>
+            <li>
+                <a href="" class="sign-out">Sign out</a>
+            </li>
+        </ul>
+
+    </div>
+
+</body>
+</html>
